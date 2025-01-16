@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/admin_form.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>WEB-Аналитика движений</title>
+</head>
+
+<body class="animation-bg">
+    <section id="formContainer">
+        <header class="header">
+            <svg viewBox="0 0 489.143 489.143" width="50" height="50">
+                <g>
+                    <polygon style="fill:#C4C8F5;"
+                        points="85.924,272.426 48.7,329.482 159.674,440.457 216.73,403.232  " />
+                    <polygon style="fill:#C4C8F5;"
+                        points="114.551,106.303 17.164,203.69 94.942,228.465 222.331,101.076  " />
+                    <polygon style="fill:#A7ADF0;"
+                        points="285.465,471.992 382.853,374.605 388.081,266.818 260.69,394.208  " />
+
+                    <rect x="11.155" y="350.18" transform="matrix(0.7071 0.7071 -0.7071 0.7071 273.7352 87.5724)"
+                        style="fill:#FFB655;" width="40.001" height="48.083" />
+
+                    <rect x="94.934" y="433.959" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 -127.6436 863.1308)"
+                        style="fill:#FF9811;" width="40.001" height="48.083" />
+
+                    <rect x="28.795" y="403.425" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -280.5937 169.442)"
+                        style="fill:#FFB655;" width="70.884" height="40" />
+                    <path style="fill:#165C92;"
+                        d="M477.223,23.582l-3.196-8.457L403.84,85.312c19.53,19.53,19.523,51.188,0,70.711   c-19.53,19.53-51.18,19.53-70.711,0L151.325,337.827l82.873,82.873l200.74-200.741C486.288,168.61,502.884,91.528,477.223,23.582z" />
+                    <path style="fill:#96C8EF;"
+                        d="M403.84,156.023c19.523-19.523,19.53-51.18,0-70.711l-70.711,70.711   C352.659,175.553,384.31,175.553,403.84,156.023z" />
+                    <path style="fill:#1E81CE;"
+                        d="M333.129,156.023c-19.523-19.523-19.53-51.18,0-70.711c19.523-19.523,51.188-19.523,70.711,0   l70.187-70.187l-8.45-3.189C444.612,4.009,422.571,0,400.085,0c-49.441,0-95.926,19.247-130.885,54.207L68.452,254.954   l82.873,82.873L333.129,156.023z" />
+                    <path style="fill:#D1E7F8;"
+                        d="M333.129,85.312c-19.53,19.53-19.523,51.188,0,70.711l70.711-70.711   C384.317,65.789,352.652,65.789,333.129,85.312z" />
+                </g>
+            </svg>
+            <div class="title">Demcore Interprice</div>
+        </header>
+        <form id="flySpaceForm" class="form hidden">
+            <section>
+                <h2>НУ:</h2>
+                <div class="group group-id">
+                    <div class="nice-form-group form__input">
+                        <label>h0, [м]</label>
+                        <input type="search" placeholder="36000" value="36000" name="h0" />
+                    </div>
+                    <div class="nice-form-group form__input"><label>V0, [м/c]</label><input type="search"
+                            placeholder="5300" value="5300" name="V0" /></div>
+                    <div class="nice-form-group form__input"><label>thet0, [град]</label><input type="search"
+                            placeholder="-42" value="-42" name="thet0" /></div>
+                    <div class="nice-form-group form__input"><label>wx0, [рад/c]</label><input type="search"
+                            placeholder="0.01" value="0.01" name="wx0" /></div>
+                    <div class="nice-form-group form__input"><label>wy0, [рад/c]</label><input type="search"
+                            placeholder="0.01" value="0.01" name="wy0" /></div>
+                    <div class="nice-form-group form__input"><label>wz0, [рад/c]</label><input type="search"
+                            placeholder="0.01" value="0.01" name="wz0" /></div>
+                    <div class="nice-form-group form__input"><label>dt, [c]</label><input type="search"
+                            placeholder="0.0001" value="0.0001" name="dt" /></div>
+                </div>
+            </section>
+            <section>
+                <h2>Параметры ракеты:</h2>
+                <div class="group group-id">
+                    <div class="nice-form-group form__input"><label>m, [кг]</label><input type="search"
+                            placeholder="1200" value="1200" name="mass" /></div>
+                    <div class="nice-form-group form__input"><label>Ix, [кг с]</label><input type="search"
+                            placeholder="180" value="180" name="Ix" /></div>
+                    <div class="nice-form-group form__input"><label>Iy, [кг с]</label><input type="search"
+                            placeholder="700" value="700" name="Iy" /></div>
+                    <div class="nice-form-group form__input"><label>Iz, [кг с]</label><input type="search"
+                            placeholder="700" value="700" name="Iz" /></div>
+                    <div class="nice-form-group form__input"><label>dm, [м]</label><input type="search" placeholder="1"
+                            value="1.4" name="dm" /></div>
+                    <div class="nice-form-group form__input"><label>L, [м]</label><input type="search" placeholder="3.7"
+                            value="3.7" name="L" /></div>
+                </div>
+            </section>
+            <section>
+                <h2>Координаты цели:</h2>
+                <section class="group group-target">
+                    <div class="nice-form-group form__input"><label>Xцели, [м]</label><input type="search"
+                            placeholder="41672" value="41672" name="Xtarget" /></div>
+                    <div class="nice-form-group form__input"><label>Yцели, [м]</label><input type="search"
+                            placeholder="0" value="0" name="Ytarget" /></div>
+                    <div class="nice-form-group form__input"><label>Zцели, [м]</label><input type="search"
+                            placeholder="-2000" value="-2000" name="Ztarget" /></div>
+                </section>
+            </section>
+            <section>
+                <h2>Коэффициенты СН и СС:</h2>
+                <div class="group group-koeff">
+                    <div class="nice-form-group form__input"><label>Kfi</label><input type="search" value="50"
+                            placeholder="50" name="Kfi" /></div>
+                    <div class="nice-form-group form__input"><label>Khi</label><input type="search" value="50"
+                            placeholder="50" name="Khi" /></div>
+                </div>
+                <div class="group group-koeff">
+                    <div class="nice-form-group form__input"><label>Kthet</label><input type="search" value="25"
+                            placeholder="25" name="Kthet" /></div>
+                    <div class="nice-form-group form__input"><label>Kpsi</label><input type="search" value="25"
+                            placeholder="25" name="Kpsi" /></div>
+                    <div class="nice-form-group form__input"><label>Kgamma</label><input type="search" value="1"
+                            placeholder="1" name="Kgamma" /></div>
+                    <div class="nice-form-group form__input"><label>Kgammat</label><input type="search" value="1"
+                            placeholder="1" name="Kgammat" /></div>
+                </div>
+            </section>
+            <section class="btn__wrap">
+                <button type="submit" class="btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <g fill="none">
+                            <path
+                                d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z" />
+                            <path fill="currentColor"
+                                d="m12 13.414l2.947 2.947l-9.697 5.598a1.488 1.488 0 0 1-1.568-.041l-.108-.078L12 13.414Zm-9-9L10.586 12L3 19.586V4.414Zm13.74 4.26l3.51 2.027c1 .577 1 2.02 0 2.598l-3.51 2.027L13.414 12l3.326-3.326ZM5.25 2.041l9.697 5.598L12 10.586L3.574 2.159a1.492 1.492 0 0 1 1.676-.118Z" />
+                        </g>
+                    </svg>
+                </button>
+                <a href="https://t.me/webdemchek" class="btn" id="tg_link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16">
+                        <path fill="currentColor"
+                            d="M8 0C3.581 0 0 3.581 0 8s3.581 8 8 8s8-3.581 8-8s-3.581-8-8-8zm3.931 5.484l-1.313 6.184c-.091.441-.356.544-.725.341l-2-1.478l-.959.934c-.112.109-.2.2-.4.2c-.259 0-.216-.097-.303-.344L5.55 9.084l-1.978-.616c-.428-.131-.431-.425.097-.634l7.706-2.975c.35-.159.691.084.556.625z" />
+                    </svg>
+                </a>
+            </section>
+        </form>
+    </section>
+
+    <!-- Ctrl + C копируется с заголовками -->
+    <div id="app">
+    </div>
+</body>
+
+<script src="js/lib/math.min.js" defer></script>
+<script src="js/lib/ag-charts-community.js" defer></script>
+<script src="js/lib/ag-grid-community.js" defer></script>
+<script src="js/lib/ag-grid-enterprise.js" defer></script>
+<script src="js/main.js" type="module" defer></script>
+
+</html>
